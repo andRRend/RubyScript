@@ -38,7 +38,7 @@ puts Fibonachi_up 9
 class Point
 	attr_accessor :x, :y
 
-	def initialize x, y
+	def initialize x,y
 		@x = x
 		@y = y
 	end
