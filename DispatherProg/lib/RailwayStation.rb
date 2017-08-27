@@ -7,18 +7,18 @@ require_relative 'Route'
     # Может показывать список всех поездов на станции, находящиеся в текущий момент
     # Может показывать список поездов на станции по типу (см. ниже): кол-во грузовых, пассажирских
     # Может отправлять поезда (при этом, поезд удаляется из списка поездов, находящихся на станции).
-    attr_accessor :count_train
+    attr_reader :count_train
 
     def initialize name
       @name = name
     end
 
     def show_train_type train
-      puts "#{@type}"
+      @@train_type
     end
 
     def departure_train
-      
+
     end
 
     def method_name

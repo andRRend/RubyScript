@@ -9,19 +9,15 @@ require_relative 'RailwayStation'
   attr_reader :route
 
     def initialize
-      # @route = {1 => "station_1", 2 => "station_2", 3 => "station_3"}
-      @route = ['Stavropol','MinVody','Kislovodsk','Pyatigorsk','Essentuki']
+      @route = Array.new
     end
 
-    def new_station station
-      # hash = {number => name_station}
-      # @route.merge!(hash)
+    def add_station station
       @route << station
     end
 
-    def delete_station number_station
-      # @route.delete(number)
-      @route.delete_at (number_station)
+    def delete_station index_station
+      @route.delete_at (index_station)
     end
 
     def show_list

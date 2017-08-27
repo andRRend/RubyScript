@@ -2,6 +2,7 @@ require_relative 'lib/Train'
 require_relative 'lib/RailwayStation'
 require_relative 'lib/Route'
 
+# 4
 # Разбить программу на отдельные классы (каждый класс в отдельном файле)
 # Разделить поезда на два типа PassangerTrain и CargoTrain, сделать родителя для классов, который будет содержать общие методы и свойства
 # Определить, какие методы могут быть помещены в private/protected и вынести их в такую секцию. В комментарии к методу обосновать, почему он был вынесен в private/protected
@@ -14,7 +15,30 @@ require_relative 'lib/Route'
 # Помещать поезда на станцию
 # Просматривать список станций и список поездов на станции
 
+# 5
+# Создать модуль, который позволит указывать название компании-производителя и получать его. Подключить модуль к классам Вагон и Поезд
+# В классе RailwayStation (жд станция) создать метод класса all, который выводит список всех станций, созданных на данный момент
+# В классе Train создать метод класса find, который принимает номер поезда и возвращает объект поезда по номеру или nil, если поезд с таким номером не найден.
+# Усложенное задание: Создать модуль InstanceCounter, содержащий следующие методы класса и инстанс-методы, которые подключаются автоматически при вызове include в классе:
+#  Методы класса:
+#    instances, который возвращает кол-во экземпляров данного класса
+# Инастанс-методы:
+#     register_instance, который увеличивает счетчик кол-ва экземпляров класса и который можно вызвать из конструктора. При этом, данный метод не должен быть публичным.
+
   class DispatherProg
     def initialize
     end
   end
+
+#load 'DispatherProg/DispatherProg.rb'
+station1 = RailwayStation.new 'st1'
+station2 = RailwayStation.new 'st2'
+station3 = RailwayStation.new 'st3'
+station4 = RailwayStation.new 'st4'
+route1 = Route.new
+route1.add_station station1
+route1.add_station station2
+route1.add_station station3
+route1.add_station station4
+train1 = Train.new
+train1.set_route route1
