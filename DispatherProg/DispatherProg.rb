@@ -1,6 +1,9 @@
 require_relative 'lib/Train'
 require_relative 'lib/RailwayStation'
 require_relative 'lib/Route'
+require_relative 'lib/PassangerTrain'
+require_relative 'lib/CargoTrain'
+require_relative 'lib/Wagon'
 
 # 4
 # Разбить программу на отдельные классы (каждый класс в отдельном файле)
@@ -25,20 +28,10 @@ require_relative 'lib/Route'
 # Инастанс-методы:
 #     register_instance, который увеличивает счетчик кол-ва экземпляров класса и который можно вызвать из конструктора. При этом, данный метод не должен быть публичным.
 
-  class DispatherProg
-    def initialize
-    end
-  end
 
-#load 'DispatherProg/DispatherProg.rb'
-station1 = RailwayStation.new 'st1'
-station2 = RailwayStation.new 'st2'
-station3 = RailwayStation.new 'st3'
-station4 = RailwayStation.new 'st4'
-route1 = Route.new
-route1.add_station station1
-route1.add_station station2
-route1.add_station station3
-route1.add_station station4
-train1 = Train.new
-train1.set_route route1
+# load 'DispatherProg.rb'
+station0 = RailwayStation.new 'station0'
+station1 = RailwayStation.new 'station1'
+train1 = PassangerTrain.new station0
+train2 = CargoTrain.new station1
+
