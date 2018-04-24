@@ -1,1 +1,0 @@
-Super robust and furious lift for any housing type.
